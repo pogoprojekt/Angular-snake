@@ -1,0 +1,32 @@
+<h1>Welcome to the Snake Game!</h1>
+<h2>
+  This is exciting game! Fill out the form below to get started!
+</h2>
+<form #form="ngForm" (submit)="startGame(form.value)">
+  Name
+  <input
+    name="playerName"
+    #nameModel="ngModel"
+    required
+    minlength="3"
+    ngModel
+    placeholder="Enter player name"
+  />
+  <div *ngIf="nameModel.touched && nameModel.invalid">
+    Name must have at least 3 chars
+  </div>
+  <br />
+  Email
+  <input
+    name="playerEmail"
+    required
+    pattern="^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$"
+    type="email"
+    placeholder="Enter player email"
+    ngModel
+  />
+  <br />
+  <br />
+  <br />
+  <button [disabled]="form.invalid">Start Game</button>
+</form>
