@@ -1,0 +1,17 @@
+<h2>Welcome, {{ playerName }}!</h2>
+Game status: <p [style.color]="color"><b>{{gameStatus}}</b></p>
+<p>Points: {{ points }}</p>
+<p>Keep going! Time in game: {{ timeInSeconds }}</p>
+  <ngx-snake 
+  (foodEaten)="onGrow()"
+  (gameOver)="onGameOver()"
+  ></ngx-snake>
+
+<button (click)="startButton()">Start</button>
+<button (click)="stopButton()">Stop</button>
+<button (click)="resetButton()">Reset</button>
+<button (click)="upButton()">Up</button>
+<button (click)="downButton()">Down</button>
+<button (click)="leftButton()">Left</button>
+<button (click)="rightButton()">Right</button> 
+<div><button (click)="exitGame()">Exit Game</button></div>

@@ -2,3 +2,6 @@
     *ngIf="currentPage === 'introPage'"
     (startGameEvent)="startGame($event)"
   ></app-intropage>
+  <app-gamepage *ngIf="currentPage==='gamePage'" [playerName]="currentPlayerName"
+  (exitGameEvent)="exitGame()"></app-gamepage>
+
