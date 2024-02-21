@@ -16,7 +16,7 @@ export class GamepageComponent {
   public color = '';
   public points: number = 0;
   public timeInSeconds: number = 0;
-  public timer: any;
+  timer: any;
   public gameStatus: string = 'Ready';
 
 
