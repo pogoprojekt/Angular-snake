@@ -16,7 +16,7 @@ export class GamepageComponent {
   public color = '';
   public points: number = 0;
   public timeInSeconds: number = 0;
-  timer: any;
+  public timer: any;
   public gameStatus: string = 'Ready';
 
 
@@ -76,7 +76,7 @@ export class GamepageComponent {
     alert('Game Over!');
     this.gameStatus = "Ready";
     clearInterval(this.timer);
-
+    this._snake.actionReset();
   }
 
 }
