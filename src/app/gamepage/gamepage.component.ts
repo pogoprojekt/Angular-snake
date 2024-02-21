@@ -14,12 +14,10 @@ export class GamepageComponent {
   @ViewChild(NgxSnakeComponent)
   private _snake!: NgxSnakeComponent;
   public color = '';
-  points: number = 0;
-
-  timeInSeconds: number = 0;
-  timer: any;
-
-  gameStatus: string = 'Ready';
+  public points: number = 0;
+  public timeInSeconds: number = 0;
+  public timer: any;
+  public gameStatus: string = 'Ready';
 
 
   exitGame() {
@@ -81,15 +79,4 @@ export class GamepageComponent {
 
   }
 
-  // private _updateColor() {
-  //   if (this.gameStatus = "Ready") {
-  //     this.color = 'green';
-
-  //   } else if (this.gameStatus = "Paused") {
-  //     this.color = 'orange';
-
-  //   } else {
-  //     this.color = 'red'
-  //   }
-  // }
 }
